@@ -5,14 +5,19 @@ body {
 }
 
 .nav_bar {
+    /*Isso diz ao navegador para incluir o padding dentro dos 100%, sem aumentar o tamanho total*/
+    box-sizing: border-box;
+    /*Fixa a barra em cima*/
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #1B263B;
     margin: 0%;
-    align-items: center;
     /* Alinha o título e os links exatamente no meio da altura */
-    padding: 0px 2%;
+    align-items: center;
     /* Espaço nas laterais para não encostar na tela */
+    padding: 0px 2%;
 }
 
 .logo h1 {
@@ -44,9 +49,68 @@ body {
 .main_information {
     display: flex;
     justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 30px;
 }
 
+.box_title {
+    padding-top: 100px;
+}
+
+.box_title h1 {
+    font-size: 40px;
+}
+
+.box_title p {
+    font-size: 20px;
+    /* O parágrafo não passa disso */
+    max-width: 600px;
+    /* Melhora a leitura */
+    line-height: 1.6;
+    margin-left: 10px;
+
+}
+
+.box_title button {
+
+    margin-left: 10px;
+
+    /* Cores e Fundo */
+    background-color: #E63946;
+    color: white;
+
+    /* Espaçamento e Tamanho */
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+    /* Bordas e Formato */
+    border: none;
+    /* Bordas levemente arredondadas */
+    border-radius: 8px;
+    /* Interatividade */
+    cursor: pointer;
+    /* Faz as mudanças serem suaves */
+    transition: all 0.3s ease;
+    /* Sombra leve para dar profundidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.box_title button:hover {
+    /* Escurece um pouco o vermelho */
+    background-color: #b92e3a;
+    /* O botão "sobe" levemente */
+    transform: translateY(-3px);
+    /* Sombra aumenta ao subir */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 .box_woman img {
-    height: 300px;
+    height: 450px;
     width: auto;
+    padding-top: 10px;
 }
