@@ -1,36 +1,56 @@
+:root {
+    --bg-pagina: #F0F5F4;
+    --bg-secao: #FFFFFF;
+    --bg-nav: #162840;
+    --bg-card: #162840;
+    --bg-card-hover: #1E3550;
+    --bg-footer: #0D1B2A;
+
+    --acento: #4ECBA4;
+    --acento-hover: #3aaf8c;
+    --acento-claro: #7EDFC4;
+    --acento-texto: #0a2a1e;
+
+    --texto-claro: #FFFFFF;
+    --texto-muted: #7AAFCC;
+    --texto-escuro: #1B2E45;
+    --texto-corpo: #4a6070;
+
+    --borda: rgba(255, 255, 255, 0.08);
+    --borda-card: rgba(255, 255, 255, 0.05);
+}
+
+
+
 body {
-    background-color: #F8F9FA;
+    background-color: var(--bg-pagina);
     margin: 0%;
     padding: 0%;
 }
 
 .nav_bar {
-    /*Isso diz ao navegador para incluir o padding dentro dos 100%, sem aumentar o tamanho total*/
     box-sizing: border-box;
-    /*Fixa a barra em cima*/
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #1B263B;
+    background-color: var(--bg-nav);
     margin: 0%;
-    /* Alinha o título e os links exatamente no meio da altura */
     align-items: center;
-    /* Espaço nas laterais para não encostar na tela */
     padding: 0px 2%;
+    z-index: 999;
 }
 
 .logo h1 {
     white-space: nowrap;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Syne', sans-serif;
     font-weight: 700;
+    color: var(--texto-claro);
 }
 
 .navigation_itens {
-
     font-family: sans-serif;
     cursor: pointer;
-
     display: flex;
     list-style: none;
     margin-right: 0%;
@@ -39,11 +59,11 @@ body {
 }
 
 .navigation_itens li {
-    color: white;
+    color: var(--texto-muted);
 }
 
 .navigation_itens li:hover {
-    color: #E63946;
+    color: var(--acento);
 }
 
 .main_information {
@@ -60,55 +80,37 @@ body {
 
 .box_title h1 {
     font-size: 40px;
+    color: var(--texto-escuro);
 }
 
 .box_title p {
     font-size: 20px;
-    /* O parágrafo não passa disso */
     max-width: 600px;
-    /* Melhora a leitura */
     line-height: 1.6;
     margin-left: 10px;
-
+    color: var(--texto-corpo);
 }
 
 .box_title button {
-
     margin-left: 10px;
-
-    /* Cores e Fundo */
-    background-color: #E63946;
-    color: white;
-
-    /* Espaçamento e Tamanho */
+    background-color: var(--acento);
+    color: var(--acento-texto);
     padding: 12px 28px;
     font-size: 18px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-
-    /* Bordas e Formato */
     border: none;
-    /* Bordas levemente arredondadas */
     border-radius: 8px;
-    /* Interatividade */
     cursor: pointer;
-    /* Faz as mudanças serem suaves */
     transition: all 0.3s ease;
-    /* Sombra leve para dar profundidade */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
-/* Efeito ao passar o mouse (Hover) */
 .box_title button:hover {
-    /* Escurece um pouco o vermelho */
-    background-color: #b92e3a;
-    /* O botão "sobe" levemente */
+    background-color: var(--acento-hover);
     transform: translateY(-3px);
-    /* Sombra aumenta ao subir */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 .box_woman img {
     height: 450px;
@@ -121,32 +123,31 @@ body {
     justify-content: center;
     padding: 10px;
     gap: 50px;
-    /* Para quebrar linha no celular */
     flex-wrap: wrap;
+    padding-bottom: 100px;
 }
 
-
-
 .cards {
-    background-color: #1B263B;
+    background-color: var(--bg-card);
     width: 300px;
     height: 300px;
     padding: 20px;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .cards:hover {
     transform: translateY(-5px);
-    cursor: pointer;
 }
 
 .cards h2 {
     text-align: center;
-    color: white;
+    color: var(--texto-claro);
 }
 
 .cards p {
-    color: white;
+    font-size: 18px;
+    color: var(--texto-muted);
 }
 
 .skills ul {
@@ -158,6 +159,83 @@ body {
 }
 
 .skills ul li {
-    background-color: greenyellow;
+    text-align: center;
+    width: 70px;
+    height: auto;
+    background-color: var(--acento);
+    color: var(--acento-texto);
     border-radius: 5px;
+}
+
+.btn_go {
+    background-color: var(--acento);
+    color: var(--acento-texto);
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn_go:hover {
+    background-color: var(--acento-hover);
+    transform: translateX(3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: var(--bg-footer);
+    color: var(--texto-claro);
+    padding: 40px 32px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: var(--texto-claro);
+}
+
+.footer-brand p {
+    color: var(--texto-muted);
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--texto-muted);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--acento);
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: var(--texto-muted);
+    border-top: 1px solid var(--borda);
+    padding-top: 16px;
+    width: 100%;
+    text-align: center;
 }
