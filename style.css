@@ -1,0 +1,52 @@
+body {
+    background-color: #F8F9FA;
+    margin: 0%;
+    padding: 0%;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1B263B;
+    margin: 0%;
+    align-items: center;
+    /* Alinha o título e os links exatamente no meio da altura */
+    padding: 0px 2%;
+    /* Espaço nas laterais para não encostar na tela */
+}
+
+.logo h1 {
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.navigation_itens {
+
+    font-family: sans-serif;
+    cursor: pointer;
+
+    display: flex;
+    list-style: none;
+    margin-right: 0%;
+    gap: 30px;
+    white-space: nowrap
+}
+
+.navigation_itens li {
+    color: white;
+}
+
+.navigation_itens li:hover {
+    color: #E63946;
+}
+
+.main_information {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box_woman img {
+    height: 300px;
+    width: auto;
+}
