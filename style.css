@@ -58,11 +58,12 @@ body {
     white-space: nowrap
 }
 
-.navigation_itens li {
+.navigation_itens li, a {
     color: var(--texto-muted);
+    text-decoration: none;
 }
 
-.navigation_itens li:hover {
+.navigation_itens a:hover {
     color: var(--acento);
 }
 
