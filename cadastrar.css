@@ -103,6 +103,7 @@ body {
     background-color: var(--acento);
     transition: all 0.3s ease;
     font-weight: 11600px;
+    color: var(--bg-secao);
 }
 
 .entrar_login:hover {
