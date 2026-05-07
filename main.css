@@ -1,0 +1,107 @@
+:root {
+    --bg-pagina: #F0F5F4;
+    --bg-secao: #FFFFFF;
+    --bg-nav: #162840;
+    --bg-card: #162840;
+    --bg-card-hover: #1E3550;
+    --bg-footer: #0D1B2A;
+
+    --acento: #4ECBA4;
+    --acento-hover: #3aaf8c;
+    --acento-claro: #7EDFC4;
+    --acento-texto: #0a2a1e;
+
+    --texto-claro: #FFFFFF;
+    --texto-muted: #7AAFCC;
+    --texto-escuro: #1B2E45;
+    --texto-corpo: #4a6070;
+
+    --borda: rgba(255, 255, 255, 0.08);
+    --borda-card: rgba(255, 255, 255, 0.05);
+}
+
+
+body {
+    background-color: var(--bg-pagina);
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    overflow: hidden;
+    transition: width 0.3s ease, min-width 0.3s ease;
+    background-color: var(--bg-secao);
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar.fechada {
+    width: 0;
+    min-width: 0;
+}
+
+.sidebar_inner {
+    width: 240px;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    /* veio para cá */
+    overflow-y: auto;
+    /* necessário para o scroll funcionar aqui */
+    height: 100vh;
+}
+
+#btn-toggle {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+.conteudo h1 {
+    margin-left: 10px;
+}
+
+
+.all_cards {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+
+.cards {
+    background-color: var(--bg-card);
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+.cards h2 {
+    text-align: center;
+    color: var(--texto-claro);
+}
+
+.cards p {
+    font-size: 18px;
+    color: var(--texto-muted);
+}

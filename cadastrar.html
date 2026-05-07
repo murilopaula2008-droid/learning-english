@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="cadastrar.css">
+</head>
+
+<body>
+
+    <div class="fatherlogin_box">
+        <div class="login_box">
+            <div class="logo">
+                <h1>Pratice English</h1>
+            </div>
+            <div class="info_email">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="seu@email.com" class="box_pergunta">
+            </div>
+            <div class="info_email">
+                <label for="email">Repetir E-mail</label>
+                <input type="email" name="email" id="email" placeholder="seu@email.com" class="box_pergunta">
+            </div>
+
+            <div class="info_senha">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="•••••••••" class="box_pergunta">
+            </div>
+
+            <div class="infor_pais">
+                <label for="pais">Seu país</label>
+                <input list="lista_paises" class="box_pergunta" id="escolher_pais" name="pais" placeholder="Seu país?">
+
+                <datalist id="lista_paises">
+                    <option value="Brasil">
+                    <option value="Estados Unidos">
+                    <option value="China">
+                    <option value="Russia">
+                    <option value="Canada">
+                </datalist>
+            </div>
+
+            <div class="tservicoes">
+                <input type="checkbox" name="termos_serviçoes" id="termos_servicos">
+                <p>Eu li e aceito os <a href="">termos de uso</a>, <a href="">termos de licença</a> de uso de software,
+                    política de conteúdo da Pratice English</p>
+            </div>
+
+            <button class="entrar_login">Entrar</button>
+        </div>
+    </div>
+</body>
+
+</html>
